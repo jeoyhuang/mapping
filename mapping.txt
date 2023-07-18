@@ -1,0 +1,43 @@
+Yes, you can create YAML and PGM files for a map from a JSON file using a Python script and even automate the calls to ROS 2 commands for map saving. Below is a Python script that performs all the necessary steps to achieve this:
+
+```python
+import json
+import yaml
+import subprocess
+
+def convert_json_to_yaml(json_file, yaml_file):
+    with open(json_file, 'r') as file:
+        data = json.load(file)
+        with open(yaml_file, 'w') as outfile:
+            yaml.dump(data, outfile, default_flow_style=False)
+
+def save_map_as_pgm_and_yaml(yaml_file, map_name):
+    # Save the YAML data as a .yaml file
+    with open(f"{map_name}.yaml", 'w') as outfile:
+        outfile.write(yaml_file)
+
+    # Call the map_saver tool from ROS 2 using subprocess
+    cmd = ["ros2", "run", "nav2_map_server", "map_saver", "-f", map_name]
+    subprocess.run(cmd)
+
+if __name__ == "__main__":
+    # Specify the path to your input JSON file
+    json_file_path = 'input.json'
+
+    # Specify the desired name for your map
+    map_name = 'my_map'
+
+    # Convert JSON to YAML
+    with open(json_file_path, 'r') as json_file:
+        json_data = json.load(json_file)
+        yaml_data = yaml.dump(json_data, default_flow_style=False)
+
+    # Save the YAML data as a .yaml file and create PGM and YAML files for the map
+    save_map_as_pgm_and_yaml(yaml_data, map_name)
+```
+
+In this script, we first convert the JSON data to YAML using the `json` and `yaml` Python libraries. Next, we save the YAML data to a `.yaml` file and then call the `map_saver` tool from ROS 2 using the `subprocess` module to generate the PGM and additional YAML files for the map.
+
+Make sure you have ROS 2 installed and the `nav2_map_server` package available for the `map_saver` tool to work correctly. Also, ensure that your JSON file represents the map data in the correct format with appropriate map information such as resolution, origin, and occupancy values.
+
+After running this Python script, you should have the `my_map.pgm` and `my_map.yaml` files representing the map converted from the JSON data, ready for use in ROS 2 and RViz.
