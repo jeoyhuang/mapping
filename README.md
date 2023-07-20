@@ -154,3 +154,54 @@ Depending on your specific requirements and the algorithms you plan to use, you 
 need to modify and expand upon these steps. Additionally, you may need to configure 
 the LiDAR sensor parameters, perform data processing, implement filtering techniques, 
 and integrate with other sensor data or localization libraries.
+
+
+To use SLAM's localization algorithm in the code above, we can integrate cartographer_ros's localization capabilities to estimate the robot's pose within the environment. However, please note that cartographer_ros is typically designed to work as a separate ROS node that runs SLAM and provides localization and mapping information to other nodes. To integrate it into the code, we'll need to communicate with the cartographer_ros node to obtain the robot's localized pose.
+
+Below is an updated version of the Python script that incorporates cartographer_ros for SLAM-based localization:
+
+```python
+#!/usr/bin/env python3
+
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import PoseStamped
+from cartographer_ros_msgs.msg import TrajectoryStates
+
+class LidarLocalizationNode(Node):
+    def __init__(self):
+        super().__init__("lidar_localization_node")
+        self.publisher = self.create_publisher(PoseStamped, "localized_pose", 10)
+        self.subscription = self.create_subscription(
+            TrajectoryStates, "/trajectory_states", self.trajectory_callback, 10
+        )
+        self.is_slam_initialized = False
+
+    def trajectory_callback(self, msg):
+        if not self.is_slam_initialized:
+            self.is_slam_initialized = True
+
+    def publish_localized_pose(self, pose):
+        pose_stamped_msg = PoseStamped()
+        pose_stamped_msg.header.stamp = self.get_clock().now().to_msg()
+        pose_stamped_msg.header.frame_id = "map"
+        pose_stamped_msg.pose = pose
+        self.publisher.publish(pose_stamped_msg)
+
+def main(args=None):
+    rclpy.init(args=args)
+    lidar_localization_node = LidarLocalizationNode()
+    rclpy.spin(lidar_localization_node)
+    rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()
+```
+
+In this updated version, we subscribe to the "/trajectory_states" topic, which is typically published by cartographer_ros. When cartographer_ros is running, it provides the estimated trajectory states of the robot in the map, including the localized pose (position and orientation).
+
+The `trajectory_callback` function is empty in this example, as we are not using the localization information from cartographer_ros directly. Instead, you would need to extract the localized pose information from the `msg` in the `trajectory_callback` function and then publish it using the `publish_localized_pose` function.
+
+Remember that to run cartographer_ros and use it for localization, you will need to set up cartographer_ros correctly, including providing appropriate sensor configurations, robot URDF, and launch files. Additionally, you will need to configure cartographer_ros to publish the "/trajectory_states" topic with the robot's localized pose.
+
+Integrating cartographer_ros into your Python code may require additional configuration and handling, and the specific implementation will depend on your robot's setup and the details of cartographer_ros configuration. For comprehensive integration and configuration details, refer to the cartographer_ros documentation and examples provided by the cartographer_ros community.
