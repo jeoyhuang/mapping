@@ -1,0 +1,13 @@
+charging stations:
+- height: 3
+  width: 3
+  x: 5
+  y: 1
+obstacles:
+- height: 3
+  width: 2
+  x: 5
+  y: 8
+waypoints:
+- x: 5
+  y: 1
