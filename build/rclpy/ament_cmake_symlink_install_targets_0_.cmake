@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/vboxuser/project/mapping/build/rclpy/test_rclpy/_rclpy_pybind11.cpython-38-x86_64-linux-gnu.so" "TARGETS" "_rclpy_pybind11" "DESTINATION" "lib/python3.8/site-packages/rclpy")

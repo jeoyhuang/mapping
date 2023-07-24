@@ -1,0 +1,81 @@
+[0.028s] Invoking command in '/home/vboxuser/project/mapping/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/project/mapping/install/rclpy
+[0.268s] -- The C compiler identification is GNU 9.4.0
+[0.475s] -- The CXX compiler identification is GNU 9.4.0
+[0.486s] -- Check for working C compiler: /usr/bin/cc
+[0.610s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.613s] -- Detecting C compiler ABI info
+[0.743s] -- Detecting C compiler ABI info - done
+[0.762s] -- Detecting C compile features
+[0.763s] -- Detecting C compile features - done
+[0.770s] -- Check for working CXX compiler: /usr/bin/c++
+[0.917s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.919s] -- Detecting CXX compiler ABI info
+[1.064s] -- Detecting CXX compiler ABI info - done
+[1.091s] -- Detecting CXX compile features
+[1.093s] -- Detecting CXX compile features - done
+[1.100s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[1.148s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.149s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.268s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.319s] -- Found lifecycle_msgs: 1.0.3 (/opt/ros/galactic/share/lifecycle_msgs/cmake)
+[1.372s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.387s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[1.522s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.580s] -- Found FastRTPS: /opt/ros/galactic/include  
+[1.746s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.817s] -- Found rcl: 3.1.4 (/opt/ros/galactic/share/rcl/cmake)
+[1.929s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.935s] -- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.984s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.986s] -- Looking for pthread.h
+[2.122s] -- Looking for pthread.h - found
+[2.122s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.262s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.262s] -- Looking for pthread_create in pthreads
+[2.373s] -- Looking for pthread_create in pthreads - not found
+[2.374s] -- Looking for pthread_create in pthread
+[2.496s] -- Looking for pthread_create in pthread - found
+[2.500s] -- Found Threads: TRUE  
+[2.553s] -- Found rcl_action: 3.1.4 (/opt/ros/galactic/share/rcl_action/cmake)
+[2.710s] -- Found rcl_lifecycle: 3.1.4 (/opt/ros/galactic/share/rcl_lifecycle/cmake)
+[3.182s] -- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter Development 
+[3.187s] -- Found pybind11_vendor: 2.2.7 (/opt/ros/galactic/share/pybind11_vendor/cmake)
+[3.230s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.288s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[3.478s] -- Performing Test HAS_FLTO
+[3.751s] -- Performing Test HAS_FLTO - Success
+[3.751s] -- LTO enabled
+[3.758s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[3.983s] -- Found gtest sources under '/opt/ros/galactic/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.988s] -- Check if compiler accepts -pthread
+[4.120s] -- Check if compiler accepts -pthread - yes
+[40.818s] -- Added test 'copyright' to check source files copyright and LICENSE
+[40.830s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[40.831s] -- Configured cpplint exclude dirs and/or files: 
+[40.835s] -- Added test 'flake8' to check Python code syntax and style conventions
+[40.837s] -- Added test 'lint_cmake' to check CMake code style
+[40.839s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[40.852s] -- Added test 'uncrustify' to check C / C++ code style
+[40.852s] -- Configured uncrustify additional arguments: 
+[40.855s] -- Added test 'xmllint' to check XML markup files
+[40.863s] -- Configuring done
+[40.901s] -- Generating done
+[40.906s] -- Build files have been written to: /home/vboxuser/project/mapping/build/rclpy
+[40.935s] Invoked command in '/home/vboxuser/project/mapping/build/rclpy' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/project/mapping/install/rclpy
+[40.938s] Invoking command in '/home/vboxuser/project/mapping/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/vboxuser/project/mapping/build/rclpy -- -j1 -l1
+[41.022s] [35m[1mScanning dependencies of target _rclpy_pybind11[0m
+[41.270s] [  2%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_logging.cpp.o[0m
+[42.864s] [01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:[m[K In function ‘[01m[Kvoid rclpy_logging_rosout_add_sublogger(const char*, const char*)[m[K’:
+[42.864s] [01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:213:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krcl_logging_rosout_add_sublogger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclpy_logging_rosout_add_sublogger[m[K’?
+[42.868s]   213 |   rcl_ret_t rcl_ret = [01;31m[Krcl_logging_rosout_add_sublogger[m[K(logger_name, sublogger_name);
+[42.868s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[42.868s]       |                       [32m[Krclpy_logging_rosout_add_sublogger[m[K
+[42.870s] [01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:[m[K In function ‘[01m[Kvoid rclpy_logging_rosout_remove_sublogger(const char*, const char*)[m[K’:
+[42.870s] [01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:225:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krcl_logging_rosout_remove_sublogger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclpy_logging_rosout_remove_sublogger[m[K’?
+[42.871s]   225 |   rcl_ret_t rcl_ret = [01;31m[Krcl_logging_rosout_remove_sublogger[m[K(logger_name, sublogger_name);
+[42.871s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[42.871s]       |                       [32m[Krclpy_logging_rosout_remove_sublogger[m[K
+[44.462s] make[2]: *** [CMakeFiles/_rclpy_pybind11.dir/build.make:63: CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_logging.cpp.o] Error 1
+[44.472s] make[1]: *** [CMakeFiles/Makefile2:104: CMakeFiles/_rclpy_pybind11.dir/all] Error 2
+[44.473s] make: *** [Makefile:141: all] Error 2
+[44.473s] Invoked command in '/home/vboxuser/project/mapping/build/rclpy' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/vboxuser/project/mapping/build/rclpy -- -j1 -l1

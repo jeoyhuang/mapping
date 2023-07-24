@@ -21,7 +21,7 @@ def save_map_as_pgm_and_yaml(yaml_file, map_name):
     subprocess.run(cmd)
 
 if __name__ == "__main__":
-    changepath = True
+    changepath = False
     ros_path = "" if changepath else "/opt/ros/galactic/bin"
     os.environ["PATH"] = ros_path + os.pathsep + os.environ["PATH"]
     os.environ["PYTHONPATH"] = ros_path + os.pathsep + os.environ.get("PYTHONPATH","")

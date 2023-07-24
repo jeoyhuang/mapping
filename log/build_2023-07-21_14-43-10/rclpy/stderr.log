@@ -1,0 +1,13 @@
+[01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:[m[K In function ‘[01m[Kvoid rclpy_logging_rosout_add_sublogger(const char*, const char*)[m[K’:
+[01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:213:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krcl_logging_rosout_add_sublogger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclpy_logging_rosout_add_sublogger[m[K’?
+  213 |   rcl_ret_t rcl_ret = [01;31m[Krcl_logging_rosout_add_sublogger[m[K(logger_name, sublogger_name);
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                       [32m[Krclpy_logging_rosout_add_sublogger[m[K
+[01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:[m[K In function ‘[01m[Kvoid rclpy_logging_rosout_remove_sublogger(const char*, const char*)[m[K’:
+[01m[K/home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy/src/rclpy/_rclpy_logging.cpp:225:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krcl_logging_rosout_remove_sublogger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclpy_logging_rosout_remove_sublogger[m[K’?
+  225 |   rcl_ret_t rcl_ret = [01;31m[Krcl_logging_rosout_remove_sublogger[m[K(logger_name, sublogger_name);
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                       [32m[Krclpy_logging_rosout_remove_sublogger[m[K
+make[2]: *** [CMakeFiles/_rclpy_pybind11.dir/build.make:63: CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_logging.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:104: CMakeFiles/_rclpy_pybind11.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

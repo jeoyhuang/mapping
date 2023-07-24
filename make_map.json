@@ -1,32 +1,36 @@
 {
+  "dimensions" : {
+    "x" : 1000,
+    "y" : 1000
+  },
   "obstacles" : [
     {
-      "x" : 5,
-      "y" : 8,
-      "width" : 2,
-      "height" : 3
+      "x" : 100,
+      "y" : 800,
+      "width" : 10,
+      "height" : 10
     }
   ],
   "charging stations" : [
     {
-      "x" : 5,
-      "y" : 1,
-      "width" : 3,
-      "height" : 3
+      "x" : 500,
+      "y" : 100,
+      "width" : 10,
+      "height" : 10
     }
   ],
   "waypoints" : [
     {
-      "x" : 5,
-      "y" : 1
+      "x" : 400,
+      "y" : 100
     },
     {
-      "x" : 7,
-      "y" : 10
+      "x" : 700,
+      "y" : 100
     },
     {
-      "x" : 4,
-      "y" : 7
+      "x" : 400,
+      "y" : 700
     }
 
   ]

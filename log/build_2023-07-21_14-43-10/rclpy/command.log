@@ -1,0 +1,4 @@
+Invoking command in '/home/vboxuser/project/mapping/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/project/mapping/install/rclpy
+Invoked command in '/home/vboxuser/project/mapping/build/rclpy' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/vboxuser/project/mapping/rclpy_ws/rclpy/rclpy -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/project/mapping/install/rclpy
+Invoking command in '/home/vboxuser/project/mapping/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/vboxuser/project/mapping/build/rclpy -- -j1 -l1
+Invoked command in '/home/vboxuser/project/mapping/build/rclpy' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/vboxuser/project/mapping/build/rclpy -- -j1 -l1

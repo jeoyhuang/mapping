@@ -1,0 +1,52 @@
+# RViz Configuration
+background_color: [0, 0, 0, 0]
+
+# Fixed Frame
+fixed_frame: map
+
+# Displays
+displays:
+  # OccupancyGrid Display
+  -
+    name: OccupancyGrid
+    type: rviz2/Map
+    topic: /map   # Replace with the topic where your OccupancyGrid data is published
+    alpha: 0.7
+    draw_under: 0
+
+  # PoseArray Display for Waypoints
+  -
+    name: Waypoints
+    type: rviz2/PoseArray
+    topic: /waypoints   # Replace with the topic where your Waypoints data is published
+    color: [255, 0, 255]
+    alpha: 1.0
+
+  # MarkerArray Display for Obstacles
+  -
+    name: Obstacles
+    type: rviz2/MarkerArray
+    topic: /obstacles   # Replace with the topic where your Obstacles data is published
+    color: [255, 0, 0]
+    alpha: 1.0
+
+  # MarkerArray Display for Charging Stations
+  -
+    name: ChargingStations
+    type: rviz2/MarkerArray
+    topic: /charging_stations   # Replace with the topic where your Charging Stations data is published
+    color: [0, 255, 0]
+    alpha: 1.0
+
+# Axes
+axes: []
+
+# View Controllers
+view_controllers:
+  -
+    class: "rviz2/OrbitViewController"
+    target_frame: map
+    distance: 20.0
+    yaw: 0.0
+    pitch: -1.5
+    name: TopDownView
