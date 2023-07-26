@@ -76,15 +76,15 @@ def publish_map_data():
     signal.signal(signal.SIGINT, signal_handler)
 
     # Publish the map data repeatedly until stop_publishing is True
-    # while rclpy.ok() and not stop_publishing:
-    #     occupancy_grid_msg.header.stamp = node.get_clock().now().to_msg()
-    #     publisher.publish(occupancy_grid_msg)
-    #     rclpy.spin_once(node)
+    while rclpy.ok() and not stop_publishing:
+        occupancy_grid_msg.header.stamp = node.get_clock().now().to_msg()
+        publisher.publish(occupancy_grid_msg)
+        rclpy.spin_once(node)
 
     # Publish the map data once
-    occupancy_grid_msg.header.stamp = node.get_clock().now().to_msg()
-    publisher.publish(occupancy_grid_msg)
-    rclpy.spin(node)
+    # occupancy_grid_msg.header.stamp = node.get_clock().now().to_msg()
+    # publisher.publish(occupancy_grid_msg)
+    # rclpy.spin(node)
 
     # Shutdown the node and clean up
     node.destroy_node()

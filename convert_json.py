@@ -46,9 +46,10 @@ def convert_json_to_rviz(json_file, map_yaml_file, map_pgm_file):
         x2, y2 = x1 + charging_station['width'], y1 + charging_station['height']
         draw.rectangle([x1, y1, x2, y2], fill=128)
 
+    radius = 10
     for waypoint in waypoints:
         x, y = waypoint['x'], waypoint['y']
-        draw.ellipse([x - 5, y - 5, x + 5, y + 5], fill=192)
+        draw.ellipse([x - radius, y - radius, x + radius, y + radius], fill=192)
 
     # Save the image as PGM file
     img.save(map_pgm_file)
